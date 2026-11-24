@@ -1,0 +1,9 @@
+# <type>(<scope>): <mô tả ngắn <= 72 ký tự>
+# type: feat | fix | docs | test | refactor | chore
+# scope: auth | user | patient | intake | doctor | comm | food | mealplan | journal | metric | alert | report | audit | db | ui
+#
+# Use Case / Màn hình liên quan: (VD: UC-PROF-04, SCR-PAT-07A)
+# Bảng DB hoặc API ảnh hưởng: (VD: patient_intake, POST /api/v1/intake-requests)
+# Kiểm thử đã chạy: (VD: mvn test PASS; test API/UI tại Swagger/browser OK)
+#
+# Ghi chú: nhớ chạy .\scripts\log-commit.ps1 để lưu vào docs/progress/<Họ_Tên>.md

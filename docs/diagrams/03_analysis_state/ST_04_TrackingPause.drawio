@@ -1,0 +1,110 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="st-04-pause" name="Sơ đồ trạng thái yêu cầu tạm dừng theo dõi">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="1035" pageHeight="556" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="init" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="38" y="125" width="22" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_pend" value="&lt;b&gt;Chờ xét duyệt&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;PENDING&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="220" y="100" width="195" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_appr" value="&lt;b&gt;Được duyệt&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;APPROVED&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="600" y="60" width="195" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_rej" value="&lt;b&gt;Bị từ chối&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;REJECTED&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="600" y="175" width="195" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_wdr" value="&lt;b&gt;Đã rút yêu cầu&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;WITHDRAWN&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="600" y="285" width="195" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="865" y="82" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1_inner" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="f1">
+          <mxGeometry x="6" y="6" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="865" y="197" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2_inner" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="f2">
+          <mxGeometry x="6" y="6" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="f3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="865" y="305" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="f3_inner" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="f3">
+          <mxGeometry x="6" y="6" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_st04" value="Miễn trừ BR-06 và giải phóng tải BR-01 chỉ có hiệu lực khi đơn ở trạng thái APPROVED và ngày đang xét thuộc [startDate, endDate].&lt;br&gt;Hết thời gian tạm dừng không tự đổi trạng thái sang EXPIRED; hệ thống kiểm tra phục hồi ca (TRACKING hoặc WAITING_CAPACITY)." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#F9FAFB;strokeColor=#6B7280;strokeWidth=1;fontFamily=Arial;fontSize=10;fontColor=#1F2937;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=12;spacingTop=4;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="35" y="390" width="860" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="t1" value="bệnh nhân gửi&lt;br&gt;[ngày hợp lệ]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="init" target="s_pend">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-15" as="offset"/>
+            <Array as="points">
+              <mxPoint x="140" y="136"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2" value="bác sĩ tạo trực tiếp&lt;br&gt;[ca cấp cứu] / audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.5;exitY=0.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="init" target="s_appr">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="49" y="25"/>
+              <mxPoint x="697" y="25"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t3" value="phê duyệt [BS / Trưởng khoa]&lt;br&gt;/ thông báo bệnh nhân" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_pend" target="s_appr">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="505" y="118"/>
+              <mxPoint x="505" y="96"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t4" value="từ chối [BS / Trưởng khoa]&lt;br&gt;/ ghi lý do, audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_pend" target="s_rej">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="505" y="154"/>
+              <mxPoint x="505" y="211"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t5" value="bệnh nhân rút đơn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_pend" target="s_wdr">
+          <mxGeometry x="0.15" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-10" as="offset"/>
+            <Array as="points">
+              <mxPoint x="317" y="319"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tf1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_appr" target="f1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="96"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tf2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_rej" target="f2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="211"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tf3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_wdr" target="f3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="319"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

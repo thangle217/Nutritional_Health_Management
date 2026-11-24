@@ -1,0 +1,41 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: nutrition-management-backend
+  profiles:
+    default: dev
+  config:
+    import: optional:file:../.env[.properties],optional:file:.env[.properties]
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/nhom12_dev?currentSchema=nutrition}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:change_me}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: nutrition
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    schemas: nutrition
+    default-schema: nutrition
+    locations: classpath:db/migration
+
+app:
+  timezone: ${APP_TIMEZONE:Asia/Ho_Chi_Minh}
+  cors:
+    allowed-origins:
+      - ${APP_FRONTEND_URL:http://localhost:5173}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

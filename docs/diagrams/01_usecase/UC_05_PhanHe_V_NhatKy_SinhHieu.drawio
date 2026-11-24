@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="uc-05-phanhe-5" name="Phân hệ V - Nhật ký và Sinh hiệu">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="1040" pageHeight="640" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="boundary" value="Phân hệ V: Theo dõi nhật ký và Sinh hiệu" style="swimlane;startSize=34;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#171717;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="30" width="480" height="580" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_food_01_ref" value="&lt;b&gt;UC-FOOD-01&lt;/b&gt;&lt;br&gt;Tra cứu danh mục món ăn&lt;br&gt;&lt;i&gt;(từ Phân hệ III)&lt;/i&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#555555;strokeWidth=1.2;dashed=1;dashPattern=4 3;fontFamily=Arial;fontSize=11;fontColor=#333333;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="105" y="48" width="270" height="66" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_jour_01" value="&lt;b&gt;UC-JOUR-01&lt;/b&gt;&lt;br&gt;Ghi nhật ký ăn uống và lượng nước uống&lt;br&gt;(BR-03)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="90" y="162" width="300" height="74" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_jour_03" value="&lt;b&gt;UC-JOUR-03&lt;/b&gt;&lt;br&gt;Gửi nhật ký ngày (BR-04)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="95" y="268" width="290" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_metr_01" value="&lt;b&gt;UC-METR-01&lt;/b&gt;&lt;br&gt;Ghi nhận chỉ số sức khỏe (BR-05)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="95" y="370" width="290" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_jour_02" value="&lt;b&gt;UC-JOUR-02&lt;/b&gt;&lt;br&gt;Theo dõi tiến độ dinh dưỡng cá nhân" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="95" y="476" width="290" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="inc_jour_food" value="«include»" style="dashed=1;dashPattern=6 4;endArrow=open;endSize=10;html=1;strokeColor=#222222;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#171717;labelBackgroundColor=#FFFFFF;labelPlacement=auto;" edge="1" parent="boundary" source="uc_jour_01" target="uc_food_01_ref">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_patient" value="&lt;b&gt;Bệnh nhân&lt;/b&gt;&lt;br&gt;(Patient)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;labelPerimeter=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="325" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_doctor" value="&lt;b&gt;Bác sĩ điều trị&lt;/b&gt;&lt;br&gt;(Doctor)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;labelPerimeter=1;" vertex="1" parent="1">
+          <mxGeometry x="895" y="340" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_head" value="&lt;b&gt;Trưởng khoa&lt;/b&gt;&lt;br&gt;(Head of Dept)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;labelPerimeter=1;" vertex="1" parent="1">
+          <mxGeometry x="895" y="485" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_j1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_jour_01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_j3" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_jour_03">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_m1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_metr_01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_j2" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_jour_02">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_j1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_jour_01" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_j3" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_jour_03" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_j2" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_jour_02" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_head_j2" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_jour_02" target="actor_head">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

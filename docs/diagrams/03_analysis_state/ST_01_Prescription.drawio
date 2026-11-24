@@ -1,0 +1,143 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="st-01-prescription" name="Sơ đồ trạng thái phiếu chỉ định">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="1325" pageHeight="520" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="init" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="38" y="174" width="22" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_draft" value="&lt;b&gt;Nháp&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;DRAFT&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="130" y="150" width="150" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_pend" value="&lt;b&gt;Chờ hiệu lực&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;PENDING_START&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="60" width="190" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_act" value="&lt;b&gt;Đang áp dụng&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;ACTIVE&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="225" width="190" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_exp" value="&lt;b&gt;Chờ tổng kết&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;EXPIRED&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="730" y="225" width="185" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_cmp" value="&lt;b&gt;Đã đóng&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;COMPLETED&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="225" width="175" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="s_can" value="&lt;b&gt;Đã hủy&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;color:#374151;&quot;&gt;CANCELLED&lt;/span&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.3;fontFamily=Arial;fontSize=11.5;fontColor=#111827;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="730" y="60" width="185" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="fin_cmp" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1083" y="355" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="fin_cmp_inner" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="fin_cmp">
+          <mxGeometry x="6" y="6" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="fin_can" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="81" width="28" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="fin_can_inner" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#111827;strokeColor=#111827;" vertex="1" parent="fin_can">
+          <mxGeometry x="6" y="6" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_st01" value="BR-02: Kỳ dự kiến 7–30 ngày, target_kcal &amp;gt; 0; chỉ BS phụ trách tạo/sửa; BS phụ trách hoặc Trưởng khoa đóng.&lt;br&gt;BR-07: Nhắc hết hạn trước 3 ngày là thông báo, không tự chuyển trạng thái. Quá end_date chuyển EXPIRED chờ tổng kết." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#F9FAFB;strokeColor=#6B7280;strokeWidth=1;fontFamily=Arial;fontSize=10;fontColor=#1F2937;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=12;spacingTop=4;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="350" width="840" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="t1" value="khởi tạo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="init" target="s_draft">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-10" as="offset"/>
+            <Array as="points">
+              <mxPoint x="95" y="185"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2" value="ban hành&lt;br&gt;[startDate &gt; hôm nay]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.5;exitY=0.0;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_draft" target="s_pend">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="205" y="95"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t3" value="ban hành&lt;br&gt;[startDate &lt;= hôm nay]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_draft" target="s_act">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="205" y="262"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t4" value="đến ngày&lt;br&gt;bắt đầu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_pend" target="s_act">
+          <mxGeometry x="-0.22" y="0.0" relative="1" as="geometry">
+            <mxPoint x="34" y="0" as="offset"/>
+            <Array as="points">
+              <mxPoint x="485" y="175"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t5" value="hủy trước hiệu lực&lt;br&gt;/ lưu lý do, audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_pend" target="s_can">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-16" as="offset"/>
+            <Array as="points">
+              <mxPoint x="655" y="95"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6" value="điều chỉnh [BS phụ trách]&lt;br&gt;/ tạo phiên bản mới" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.08;exitY=0.0;exitDx=0;exitDy=0;entryX=0.24;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_act" target="s_act">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="-44" y="-14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="405" y="190"/>
+              <mxPoint x="436" y="190"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t7" value="hết thời hạn áp dụng&lt;br&gt;(quá endDate)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_act" target="s_exp">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-16" as="offset"/>
+            <Array as="points">
+              <mxPoint x="655" y="262"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t8" value="đóng phiếu&lt;br&gt;/ đánh giá, audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_exp" target="s_cmp">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-16" as="offset"/>
+            <Array as="points">
+              <mxPoint x="962" y="262"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t9" value="đóng sớm&lt;br&gt;/ đánh giá" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.35;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_act" target="s_cmp">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="485" y="326"/>
+              <mxPoint x="1071" y="326"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t10" value="dừng trước hạn&lt;br&gt;/ lý do, audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.9;exitY=0.0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_act" target="s_can">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="561" y="172"/>
+              <mxPoint x="822" y="172"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_cmp" target="fin_cmp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1097" y="330"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.3;endArrow=open;endFill=0;endSize=9;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="s_can" target="fin_can">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="95"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

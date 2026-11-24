@@ -1,0 +1,99 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="uc-02-phanhe-2" name="Phân hệ II - Hồ sơ, Tiếp nhận và Phân công">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="1120" pageHeight="790" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="boundary" value="Phân hệ II: Hồ sơ, Tiếp nhận và Phân công điều trị" style="swimlane;startSize=34;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#171717;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="30" width="440" height="730" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_prof_01" value="&lt;b&gt;UC-PROF-01&lt;/b&gt;&lt;br&gt;Quản lý hồ sơ cá nhân" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="85" y="52" width="270" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_prof_04" value="&lt;b&gt;UC-PROF-04&lt;/b&gt;&lt;br&gt;Xác minh lượt khám và tiếp nhận" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="85" y="146" width="270" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_appt_01" value="&lt;b&gt;UC-APPT-01&lt;/b&gt;&lt;br&gt;Yêu cầu lịch khám và tái khám" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="85" y="240" width="270" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_prof_02" value="&lt;b&gt;UC-PROF-02&lt;/b&gt;&lt;br&gt;Phân công bác sĩ điều trị (BR-01)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="85" y="334" width="270" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_prof_03" value="&lt;b&gt;UC-PROF-03&lt;/b&gt;&lt;br&gt;Quản lý tạm dừng theo dõi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="85" y="428" width="270" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_prof_05" value="&lt;b&gt;UC-PROF-05&lt;/b&gt;&lt;br&gt;Xem xét khai báo bệnh lý và dị ứng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="85" y="522" width="270" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_comm_01" value="&lt;b&gt;UC-COMM-01&lt;/b&gt;&lt;br&gt;Nhắn tin và gọi tư vấn" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="85" y="620" width="270" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_sys" value="&lt;i&gt;«Abstract»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Người dùng hệ thống&lt;/b&gt;&lt;br&gt;(System User)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;labelPerimeter=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="70" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_patient" value="&lt;b&gt;Bệnh nhân&lt;/b&gt;&lt;br&gt;(Patient)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;labelPerimeter=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="410" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_head" value="&lt;b&gt;Trưởng khoa&lt;/b&gt;&lt;br&gt;(Head of Dept)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;labelPerimeter=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="210" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_doctor" value="&lt;b&gt;Bác sĩ điều trị&lt;/b&gt;&lt;br&gt;(Doctor)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;labelPerimeter=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="485" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="gen_pat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;endSize=10;html=1;strokeColor=#222222;strokeWidth=1.2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="actor_sys">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="45" y="441"/>
+              <mxPoint x="45" y="101"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sys_prof1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_sys" target="uc_prof_01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_prof4" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_prof_04">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_appt1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_appt_01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_prof3" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_prof_03">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_prof5" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_prof_05">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_comm1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="actor_patient" target="uc_comm_01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_head_prof4" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_prof_04" target="actor_head">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_head_appt1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_appt_01" target="actor_head">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_head_prof2" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_prof_02" target="actor_head">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_head_prof3" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_prof_03" target="actor_head">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_appt1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_appt_01" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_prof2" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_prof_02" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_prof3" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_prof_03" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_prof5" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_prof_05" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_doc_comm1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;labelBackgroundColor=default;defaultLabelBackgroundColor=page;" edge="1" parent="1" source="uc_comm_01" target="actor_doctor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

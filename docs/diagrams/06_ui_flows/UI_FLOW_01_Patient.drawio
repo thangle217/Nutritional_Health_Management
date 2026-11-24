@@ -1,0 +1,116 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="ui-flow-01" name="Luồng màn hình Bệnh nhân">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="1120" pageHeight="654" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="pat1" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-01&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Trang chủ Bệnh nhân (Hôm nay)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/today&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#0F172A;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="220" height="82" as="geometry"/>
+        </mxCell>
+        <mxCell id="n1" value="Gửi Nhật ký ngày tự đẩy thẻ sự kiện sang SCR-PAT-08 (Chat) &amp;amp; thông báo Bác sĩ.&lt;br&gt;Hết hạn sửa 48h -&amp;gt; nút Gửi yêu cầu hiệu chỉnh (SCR-PAT-03B)." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#F9FAFB;strokeColor=#6B7280;strokeWidth=1;fontFamily=Arial;fontSize=10;fontColor=#1F2937;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=12;spacingTop=4;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="35" width="250" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="pat2" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-02&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Thực đơn Điều trị (6 bữa)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/prescription&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="35" width="225" height="74" as="geometry"/>
+        </mxCell>
+        <mxCell id="pat3" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-03&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Nhật ký Ăn uống &amp;amp; Nước (48h)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/journal&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#1E293B;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="140" width="225" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="pat4" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-04&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Ghi Chỉ số Sức khỏe&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/metrics&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="250" width="225" height="74" as="geometry"/>
+        </mxCell>
+        <mxCell id="pat5" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-05&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Tiến độ Dinh dưỡng &amp;amp; Biểu đồ&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/progress&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="355" width="225" height="74" as="geometry"/>
+        </mxCell>
+        <mxCell id="pat6" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-06&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Hồ sơ &amp;amp; Khai báo Bệnh lý/Dị ứng&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/profile&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="390" y="460" width="225" height="74" as="geometry"/>
+        </mxCell>
+        <mxCell id="pat8" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-08&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Hội thoại Bác sĩ &amp;amp; Thông báo&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/chat | /notifications&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="745" y="115" width="235" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="pat7" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-07&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Tiếp nhận, Đặt lịch &amp;amp; Tạm dừng&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/appointments&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="745" y="250" width="235" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="corr" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-PAT-03B&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Yêu cầu Hiệu chỉnh (&amp;gt;48h)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/patient/journal/corrections&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#92400E;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="745" y="385" width="235" height="74" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1" value="Xem thực đơn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=1.0;exitY=0.15;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat1" target="pat2">
+          <mxGeometry x="0.3" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-10" as="offset"/>
+            <Array as="points">
+              <mxPoint x="320" y="232"/>
+              <mxPoint x="320" y="72"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2" value="Ghi nhật ký ngày" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=1.0;exitY=0.35;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat1" target="pat3">
+          <mxGeometry x="0.3" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-10" as="offset"/>
+            <Array as="points">
+              <mxPoint x="340" y="249"/>
+              <mxPoint x="340" y="179"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3" value="Nhập chỉ số" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=1.0;exitY=0.55;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat1" target="pat4">
+          <mxGeometry x="0.3" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="325" y="265"/>
+              <mxPoint x="325" y="287"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4" value="Xem biểu đồ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=1.0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat1" target="pat5">
+          <mxGeometry x="0.3" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="310" y="281"/>
+              <mxPoint x="310" y="392"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5" value="Cập nhật hồ sơ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat1" target="pat6">
+          <mxGeometry x="0.2" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="150" y="497"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6" value="Chốt gửi -&gt; Thẻ Chat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=1.0;exitY=0.4;exitDx=0;exitDy=0;entryX=0.0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat3" target="pat8">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="680" y="171"/>
+              <mxPoint x="680" y="146"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p7" value="Quá hạn 48h" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=1.0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat3" target="corr">
+          <mxGeometry x="0.35" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-10" as="offset"/>
+            <Array as="points">
+              <mxPoint x="660" y="198"/>
+              <mxPoint x="660" y="422"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p8" value="Thẻ Đề nghị tái khám" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat8" target="pat7">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="62" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p9" value="Vượt ngưỡng đỏ&lt;br&gt;-&gt; Cảnh báo + Email" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="pat4" target="pat8">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+            <Array as="points">
+              <mxPoint x="695" y="287"/>
+              <mxPoint x="695" y="174"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

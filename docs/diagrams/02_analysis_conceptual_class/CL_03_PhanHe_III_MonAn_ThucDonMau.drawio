@@ -1,0 +1,354 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="cl-03-monan" name="Sơ đồ lớp phân hệ III - Món ăn và thực đơn mẫu">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="1535" pageHeight="1026" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="ui_food" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Boundary»&lt;/span&gt;&lt;br&gt;&lt;b&gt;FoodUI&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Giao diện Món ăn&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#E5E7EB;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="127" y="35" width="220" height="97" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui_food_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="ui_food">
+          <mxGeometry x="0" y="55" width="220" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui_food_meths" value="+ showFoodCatalog()&lt;br&gt;+ showProposeForm()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="ui_food">
+          <mxGeometry x="0" y="59" width="220" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui_plan" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Boundary»&lt;/span&gt;&lt;br&gt;&lt;b&gt;MealPlanUI&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Giao diện Thực đơn mẫu&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#E5E7EB;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="805" y="35" width="220" height="97" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui_plan_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="ui_plan">
+          <mxGeometry x="0" y="55" width="220" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui_plan_meths" value="+ showTemplates()&lt;br&gt;+ showTemplateForm()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="ui_plan">
+          <mxGeometry x="0" y="59" width="220" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_food" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Control»&lt;/span&gt;&lt;br&gt;&lt;b&gt;FoodControl&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Điều phối Món ăn&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#E2E8F0;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="110" y="165" width="255" height="123" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_food_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="c_food">
+          <mxGeometry x="0" y="55" width="255" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_food_meths" value="+ searchFoods()&lt;br&gt;+ submitFoodVersion()&lt;br&gt;+ reviewFoodVersion()&lt;br&gt;+ updateStatus()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="c_food">
+          <mxGeometry x="0" y="59" width="255" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_acc" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Control»&lt;/span&gt;&lt;br&gt;&lt;b&gt;AccessControl&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Kiểm soát quyền&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#E2E8F0;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="165" width="220" height="97" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_acc_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="c_acc">
+          <mxGeometry x="0" y="55" width="220" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_acc_meths" value="+ checkRole()&lt;br&gt;+ checkSession()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="c_acc">
+          <mxGeometry x="0" y="59" width="220" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_plan" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Control»&lt;/span&gt;&lt;br&gt;&lt;b&gt;MealPlanControl&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Điều phối Thực đơn mẫu&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#E2E8F0;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="780" y="165" width="270" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_plan_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="c_plan">
+          <mxGeometry x="0" y="55" width="270" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_plan_meths" value="+ saveTemplateVersion()&lt;br&gt;+ approveTemplate()&lt;br&gt;+ rejectTemplate()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="c_plan">
+          <mxGeometry x="0" y="59" width="270" height="51" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_grp" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;FoodGroup&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Nhóm thực phẩm&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="180" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_grp_attrs" value="- id: UUID&lt;br&gt;- name: String&lt;br&gt;- active: Boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_grp">
+          <mxGeometry x="0" y="47" width="180" height="51" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_grp_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_grp">
+          <mxGeometry x="0" y="94" width="180" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_food" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;Food&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Món ăn&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="295" y="360" width="210" height="123" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_food_attrs" value="- id: UUID&lt;br&gt;- status: FoodStatus" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_food">
+          <mxGeometry x="0" y="47" width="210" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_food_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_food">
+          <mxGeometry x="0" y="81" width="210" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_food_meths" value="+ changeAvailability()&lt;br&gt;+ isUsableForPrescription()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_food">
+          <mxGeometry x="0" y="85" width="210" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_fver" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;FoodVersion&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Phiên bản món ăn&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="580" y="360" width="245" height="162" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_fver_attrs" value="- versionNo: Integer&lt;br&gt;- name, preparation, imageKey&lt;br&gt;- baseUnit, baseQuantity&lt;br&gt;- status: VersionStatus" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_fver">
+          <mxGeometry x="0" y="47" width="245" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_fver_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_fver">
+          <mxGeometry x="0" y="107" width="245" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_fver_meths" value="+ submit()&lt;br&gt;+ publish()&lt;br&gt;+ reject()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_fver">
+          <mxGeometry x="0" y="111" width="245" height="51" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tmpl" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;MealPlanTemplate&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Thực đơn mẫu&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="895" y="360" width="195" height="97" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tmpl_attrs" value="- id: UUID" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_tmpl">
+          <mxGeometry x="0" y="47" width="195" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tmpl_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_tmpl">
+          <mxGeometry x="0" y="68" width="195" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tmpl_meths" value="+ getPublished()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_tmpl">
+          <mxGeometry x="0" y="72" width="195" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tver" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;MealPlanTemplateVersion&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Phiên bản thực đơn mẫu&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="360" width="235" height="162" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tver_attrs" value="- versionNo: Integer&lt;br&gt;- name: String&lt;br&gt;- targetKcal: Decimal&lt;br&gt;- status: VersionStatus" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_tver">
+          <mxGeometry x="0" y="47" width="235" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tver_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_tver">
+          <mxGeometry x="0" y="107" width="235" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tver_meths" value="+ save()&lt;br&gt;+ calculateNutrition()&lt;br&gt;+ approve()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_tver">
+          <mxGeometry x="0" y="111" width="235" height="51" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_conv" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;FoodUnitConversion&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Quy đổi đơn vị gia dụng&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="645" width="210" height="97" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_conv_attrs" value="- unitName: String&lt;br&gt;- toBaseUnit: Decimal" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_conv">
+          <mxGeometry x="0" y="47" width="210" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_conv_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_conv">
+          <mxGeometry x="0" y="81" width="210" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_nutr" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;FoodNutrition&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Dinh dưỡng khẩu phần&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="645" width="240" height="123" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_nutr_attrs" value="- kcal, proteinG, carbG, lipidG&lt;br&gt;- fiberG, sugarG, sodiumMg&lt;br&gt;- cholesterolMg, glycemicIndex" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_nutr">
+          <mxGeometry x="0" y="47" width="240" height="51" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_nutr_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_nutr">
+          <mxGeometry x="0" y="94" width="240" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_nutr_meths" value="+ snapshotFor(qty)" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_nutr">
+          <mxGeometry x="0" y="98" width="240" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_aller" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;Allergen&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Chất gây dị ứng&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="615" y="645" width="195" height="97" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_aller_attrs" value="- id: UUID&lt;br&gt;- name: String" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_aller">
+          <mxGeometry x="0" y="47" width="195" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_aller_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_aller">
+          <mxGeometry x="0" y="81" width="195" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_cond" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;MedicalCondition&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Bệnh lý / Nhãn hạn chế&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="865" y="645" width="215" height="97" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_cond_attrs" value="- id: UUID&lt;br&gt;- name: String" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_cond">
+          <mxGeometry x="0" y="47" width="215" height="38" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_cond_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_cond">
+          <mxGeometry x="0" y="81" width="215" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_titem" value="&lt;span style=&quot;font-weight:normal;font-size:10px;color:#374151;&quot;&gt;«Entity»&lt;/span&gt;&lt;br&gt;&lt;b&gt;MealPlanTemplateItem&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight:normal;font-size:10px;color:#4B5563;&quot;&gt;Chi tiết thực đơn mẫu&lt;/span&gt;" style="swimlane;startSize=47;rounded=0;fillColor=#F3F4F6;strokeColor=#374151;strokeWidth=1.2;fontFamily=Arial;fontSize=11;fontColor=#111827;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="645" width="235" height="123" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_titem_attrs" value="- dayOffset: Smallint [0..29]&lt;br&gt;- slot: MealSlot&lt;br&gt;- quantity: Decimal&lt;br&gt;- unit: String" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;spacingLeft=7;spacingRight=6;spacingTop=4;spacingBottom=4;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=9.8;fontColor=#1F2937;" vertex="1" parent="e_titem">
+          <mxGeometry x="0" y="47" width="235" height="64" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_titem_sep" value="" style="line;strokeWidth=1;html=1;strokeColor=#475569;fillColor=none;" vertex="1" parent="e_titem">
+          <mxGeometry x="0" y="107" width="235" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="n_cl03" value="BR-08: FoodStatus = DRAFT, AVAILABLE, RESTRICTED, SUSPENDED, ARCHIVED. Món SUSPENDED bị chặn không cho thêm vào thực đơn mẫu hoặc chỉ định mới.&lt;br&gt;Quy trình D04: Đề xuất thêm mới/chỉnh sửa tạo FoodVersion (DRAFT -&amp;gt; IN_REVIEW -&amp;gt; PUBLISHED/REJECTED) hoặc MealPlanTemplateVersion, giữ nguyên bản PUBLISHED." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#F9FAFB;strokeColor=#6B7280;strokeWidth=1;fontFamily=Arial;fontSize=10;fontColor=#1F2937;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=12;spacingTop=4;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="860" width="1355" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="d1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ui_food" target="c_food">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="237" y="138"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ui_plan" target="c_plan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="915" y="138"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=1.0;exitY=0.3902;exitDx=0;exitDy=0;entryX=0.0;entryY=0.4948;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_food" target="c_acc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="412" y="213"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=0.0;exitY=0.4364;exitDx=0;exitDy=0;entryX=1.0;entryY=0.4948;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_plan" target="c_acc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="213"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=0.6;exitY=1.0;exitDx=0;exitDy=0;entryX=0.35;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_food" target="e_food">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="263" y="330"/>
+              <mxPoint x="368" y="330"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=0.85;exitY=1.0;exitDx=0;exitDy=0;entryX=0.25;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_food" target="e_fver">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="326" y="316"/>
+              <mxPoint x="641" y="316"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=0.85;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_plan" target="e_tver">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1009" y="316"/>
+              <mxPoint x="1277" y="316"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=0.2;exitY=1.0;exitDx=0;exitDy=0;entryX=0.75;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c_plan" target="e_fver">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="834" y="330"/>
+              <mxPoint x="763" y="330"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a1" value="phân nhóm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.2;endArrow=none;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.4472;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_grp" target="e_food">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="257" y="415"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a1_sm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a1">
+          <mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint x="0" y="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a1_tm" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a1">
+          <mxGeometry x="0.82" relative="1" as="geometry"><mxPoint x="0" y="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="phiên bản" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.25;startArrow=diamondThin;startFill=1;startSize=11;endArrow=none;exitX=1.0;exitY=0.4959;exitDx=0;exitDy=0;entryX=0.0;entryY=0.3765;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_food" target="e_fver">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="542" y="421"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2_sm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a2">
+          <mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint x="0" y="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a2_tm" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a2">
+          <mxGeometry x="0.82" relative="1" as="geometry"><mxPoint x="0" y="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a3" value="phiên bản" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.25;startArrow=diamondThin;startFill=1;startSize=11;endArrow=none;exitX=1.0;exitY=0.4948;exitDx=0;exitDy=0;entryX=0.0;entryY=0.2963;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_tmpl" target="e_tver">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="1125" y="408"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3_sm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a3">
+          <mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint x="0" y="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a3_tm" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a3">
+          <mxGeometry x="0.82" relative="1" as="geometry"><mxPoint x="0" y="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a4" value="gồm món" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.25;startArrow=diamondThin;startFill=1;startSize=11;endArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_tver" target="e_titem">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="30" y="0" as="offset"/>
+            <Array as="points">
+              <mxPoint x="1277" y="600"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4_sm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a4">
+          <mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint x="-12" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a4_tm" value="1..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a4">
+          <mxGeometry x="0.82" relative="1" as="geometry"><mxPoint x="16" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a5" value="quy đổi đơn vị" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.25;startArrow=diamondThin;startFill=1;startSize=11;endArrow=none;exitX=0.12;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_fver" target="e_conv">
+          <mxGeometry x="-0.2" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-9" as="offset"/>
+            <Array as="points">
+              <mxPoint x="609" y="588"/>
+              <mxPoint x="145" y="588"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a5_sm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a5">
+          <mxGeometry x="-0.9" relative="1" as="geometry"><mxPoint x="-12" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a5_tm" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a5">
+          <mxGeometry x="0.9" relative="1" as="geometry"><mxPoint x="16" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a6" value="dinh dưỡng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.25;startArrow=diamondThin;startFill=1;startSize=11;endArrow=none;exitX=0.3;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_fver" target="e_nutr">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-9" as="offset"/>
+            <Array as="points">
+              <mxPoint x="653" y="604"/>
+              <mxPoint x="435" y="604"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6_sm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a6">
+          <mxGeometry x="-0.9" relative="1" as="geometry"><mxPoint x="-12" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a6_tm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a6">
+          <mxGeometry x="0.9" relative="1" as="geometry"><mxPoint x="12" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a7" value="chứa dị nguyên" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.2;endArrow=none;startArrow=none;exitX=0.54;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_fver" target="e_aller">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="-44" y="0" as="offset"/>
+            <Array as="points">
+              <mxPoint x="712" y="604"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a7_sm" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a7">
+          <mxGeometry x="-0.82" relative="1" as="geometry"><mxPoint x="-14" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a7_tm" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a7">
+          <mxGeometry x="0.82" relative="1" as="geometry"><mxPoint x="16" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a8" value="hạn chế bệnh lý" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.2;endArrow=none;startArrow=none;exitX=0.82;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_fver" target="e_cond">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-9" as="offset"/>
+            <Array as="points">
+              <mxPoint x="781" y="604"/>
+              <mxPoint x="972" y="604"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a8_sm" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a8">
+          <mxGeometry x="-0.9" relative="1" as="geometry"><mxPoint x="16" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a8_tm" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a8">
+          <mxGeometry x="0.9" relative="1" as="geometry"><mxPoint x="16" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a9" value="chọn món" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.2;endArrow=none;startArrow=none;exitX=0.0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.94;entryY=1.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_titem" target="e_fver">
+          <mxGeometry x="-0.15" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-9" as="offset"/>
+            <Array as="points">
+              <mxPoint x="1125" y="738"/>
+              <mxPoint x="1125" y="622"/>
+              <mxPoint x="810" y="622"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a9_sm" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a9">
+          <mxGeometry x="-0.94" relative="1" as="geometry"><mxPoint x="0" y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="a9_tm" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontSize=9.5;fontStyle=1;fontColor=#111827;labelBackgroundColor=#FFFFFF;" vertex="1" connectable="0" parent="a9">
+          <mxGeometry x="0.94" relative="1" as="geometry"><mxPoint x="14" y="0" as="offset"/></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,28 @@
+# Build & IDE
+target/
+.mvn/wrapper/maven-wrapper.jar
+*.class
+*.log
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Environment & local secrets
+.env
+.env.local
+.env.*.local
+
+# Uploaded files & OS artifacts
+data/
+uploads/
+Thumbs.db
+.DS_Store
+~$*
+*.tmp
+
+# Frontend / Node (khi nhóm bổ sung module frontend)
+node_modules/
+dist/

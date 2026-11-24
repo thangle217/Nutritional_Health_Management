@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="ui-flow-04" name="Luồng màn hình Admin">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="845" pageHeight="568" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="na" value="Admin KHÔNG tự sửa chỉ định hoặc ngưỡng y khoa.&lt;br&gt;Dữ liệu lâm sàng bị che mặc định; xem hỗ trợ kỹ thuật cần quyền riêng + ghi AuditLog." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#F9FAFB;strokeColor=#6B7280;strokeWidth=1;fontFamily=Arial;fontSize=10;fontColor=#1F2937;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=12;spacingTop=4;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="35" width="255" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm0" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-ADM-00&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Bảng điều khiển Quản trị&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/admin/dashboard&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#0F172A;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="195" width="220" height="82" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm1" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-ADM-01&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Quản lý Tài khoản &amp;amp; Vai trò&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/admin/users&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#1E293B;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="395" y="35" width="245" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm2" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-ADM-02&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Nhóm Thực phẩm Chuẩn&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/admin/food-groups&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="395" y="145" width="245" height="76" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm3" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-ADM-03&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Tham số Vận hành &amp;amp; Sao lưu&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/admin/settings | /operations&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="395" y="255" width="245" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm4" value="&lt;span style=&quot;font-size:9.5px;color:#475569;font-weight:bold;&quot;&gt;SCR-ADM-04&lt;/span&gt;&lt;br&gt;&lt;b style=&quot;font-size:11px;color:#0F172A;&quot;&gt;Báo cáo Thứ 7 &amp;amp; Audit Log&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9.5px;color:#64748B;&quot;&gt;/admin/audit-logs | /reports&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#92400E;strokeWidth=1.4;fontFamily=Arial;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="395" y="370" width="245" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="a1" value="Tạo/Khóa/Đổi vai trò" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=1.0;exitY=0.2;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="adm0" target="adm1">
+          <mxGeometry x="0.3" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-10" as="offset"/>
+            <Array as="points">
+              <mxPoint x="325" y="211"/>
+              <mxPoint x="325" y="73"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="Quản lý food_group" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=1.0;exitY=0.45;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="adm0" target="adm2">
+          <mxGeometry x="0.3" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="-10" as="offset"/>
+            <Array as="points">
+              <mxPoint x="345" y="232"/>
+              <mxPoint x="345" y="183"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" value="system_setting &amp; backup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=1.0;exitY=0.7;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="adm0" target="adm3">
+          <mxGeometry x="0.3" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="330" y="252"/>
+              <mxPoint x="330" y="294"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4" value="Tra cứu kiểm toán" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.25;endArrow=block;endFill=1;endSize=8;startArrow=none;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="adm0" target="adm4">
+          <mxGeometry x="0.2" y="0.0" relative="1" as="geometry">
+            <mxPoint x="0" y="12" as="offset"/>
+            <Array as="points">
+              <mxPoint x="150" y="409"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a5" value="Mọi thay đổi quyền -&gt; Audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" source="adm1" target="adm4">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="56" y="0" as="offset"/>
+            <Array as="points">
+              <mxPoint x="705" y="73"/>
+              <mxPoint x="705" y="397"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" value="Lịch sử tham số -&gt; Audit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Arial;fontSize=9.5;fontColor=#111827;labelBackgroundColor=#FFFFFF;strokeColor=#4B5563;strokeWidth=1.15;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=8;startArrow=none;exitX=1.0;exitY=0.65;exitDx=0;exitDy=0;entryX=1.0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" source="adm3" target="adm4">
+          <mxGeometry x="0.0" y="0.0" relative="1" as="geometry">
+            <mxPoint x="-56" y="0" as="offset"/>
+            <Array as="points">
+              <mxPoint x="685" y="306"/>
+              <mxPoint x="685" y="424"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

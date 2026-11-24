@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="uc-01-phanhe-1" name="Phân hệ I - Xác thực và Tài khoản">
+    <mxGraphModel adaptiveColors="none" dx="0" dy="0" grid="0" page="1" pageWidth="1020" pageHeight="660" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="boundary" value="Phân hệ I: Xác thực và Quản lý tài khoản" style="swimlane;startSize=34;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#171717;swimlaneFillColor=#FFFFFF;html=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="30" width="500" height="580" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_auth_01" value="&lt;b&gt;UC-AUTH-01&lt;/b&gt;&lt;br&gt;Đăng nhập hệ thống" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="120" y="55" width="260" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_auth_02" value="&lt;b&gt;UC-AUTH-02&lt;/b&gt;&lt;br&gt;Đổi mật khẩu" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="120" y="155" width="260" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_auth_03" value="&lt;b&gt;UC-AUTH-03&lt;/b&gt;&lt;br&gt;Đăng xuất" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="120" y="255" width="260" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_auth_04" value="&lt;b&gt;UC-AUTH-04&lt;/b&gt;&lt;br&gt;Tự đăng ký và hoàn tất hồ sơ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="120" y="360" width="260" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_user_01" value="&lt;b&gt;UC-USER-01&lt;/b&gt;&lt;br&gt;Quản lý tài khoản người dùng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.25;fontFamily=Arial;fontSize=12;fontColor=#171717;spacing=6;" vertex="1" parent="boundary">
+          <mxGeometry x="120" y="468" width="260" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_sys" value="&lt;i&gt;«Abstract»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Người dùng hệ thống&lt;/b&gt;&lt;br&gt;(System User)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;" vertex="1" parent="1">
+          <mxGeometry x="320" y="150" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_doctor" value="&lt;b&gt;Bác sĩ điều trị&lt;/b&gt;&lt;br&gt;(Doctor)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;" vertex="1" parent="1">
+          <mxGeometry x="65" y="45" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_head" value="&lt;b&gt;Trưởng khoa&lt;/b&gt;&lt;br&gt;(Head of Dept)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;" vertex="1" parent="1">
+          <mxGeometry x="65" y="185" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_patient" value="&lt;b&gt;Bệnh nhân&lt;/b&gt;&lt;br&gt;(Patient)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;" vertex="1" parent="1">
+          <mxGeometry x="320" y="365" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_admin" value="&lt;b&gt;Quản trị viên&lt;/b&gt;&lt;br&gt;(Admin)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#222222;strokeWidth=1.3;fontFamily=Arial;fontSize=12;fontColor=#171717;" vertex="1" parent="1">
+          <mxGeometry x="65" y="502" width="34" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="gen_doc" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;endSize=10;html=1;strokeColor=#222222;strokeWidth=1.2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor_doctor" target="actor_sys">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="76"/>
+              <mxPoint x="200" y="172"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gen_head" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;endSize=10;html=1;strokeColor=#222222;strokeWidth=1.2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.48;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor_head" target="actor_sys">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="216"/>
+              <mxPoint x="200" y="180"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gen_pat" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;endSize=10;html=1;strokeColor=#222222;strokeWidth=1.2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.62;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor_patient" target="actor_sys">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="396"/>
+              <mxPoint x="200" y="188"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gen_adm" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=0;endSize=10;html=1;strokeColor=#222222;strokeWidth=1.2;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.76;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor_admin" target="actor_sys">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="524"/>
+              <mxPoint x="200" y="197"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sys_1" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;" edge="1" parent="1" source="actor_sys" target="uc_auth_01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_sys_2" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;" edge="1" parent="1" source="actor_sys" target="uc_auth_02">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_sys_3" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;" edge="1" parent="1" source="actor_sys" target="uc_auth_03">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pat_4" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;" edge="1" parent="1" source="actor_patient" target="uc_auth_04">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_adm_5" value="" style="endArrow=none;html=1;strokeColor=#222222;strokeWidth=1.2;" edge="1" parent="1" source="actor_admin" target="uc_user_01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
