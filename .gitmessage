@@ -1,6 +1,6 @@
 # <type>(<scope>): <mô tả ngắn <= 72 ký tự>
 # type: feat | fix | docs | test | refactor | chore
-# scope: auth | user | patient | intake | doctor | comm | food | mealplan | journal | metric | alert | report | audit | db | ui
+# scope: auth | user | patient | intake | clinical | doctor | comm | food | mealplan | journal | metric | alert | report | audit | db | ui | fe-core
 #
 # Use Case / Màn hình liên quan: (VD: UC-PROF-04, SCR-PAT-07A)
 # Bảng DB hoặc API ảnh hưởng: (VD: patient_intake, POST /api/v1/intake-requests)

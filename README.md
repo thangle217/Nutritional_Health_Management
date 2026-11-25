@@ -1,6 +1,9 @@
 # Nhóm 12 — Hệ thống quản lý dinh dưỡng và thực đơn cá nhân
 
-Khung dự án Backend (**Spring Boot 3 + Flyway + Spring Data JPA + PostgreSQL 17**) được chuẩn hóa đồng bộ từ:
+Khung dự án Monorepo (**Backend Spring Boot 3 + Flyway + PostgreSQL 17** và **Frontend React + TypeScript + Vite**) được chuẩn hóa đồng bộ từ:
+- **Quy chuẩn cho AI Agent:** [AGENTS.md](./AGENTS.md) (và [CLAUDE.md](./CLAUDE.md))
+- **Hướng dẫn chia nhánh Git, quy trình PR & Prompt mẫu cho AI:** [CONTRIBUTING.md](./CONTRIBUTING.md)
+- **Tóm tắt phân công v1.1 dạng Markdown (AI đọc trực tiếp):** [AI_TASKS_OVERVIEW.md](./docs/tasks/AI_TASKS_OVERVIEW.md)
 - Đặc tả công nghệ & quy ước: [PROJECT_TECH_STACK_AND_CONVENTIONS.docx](./docs/specs/PROJECT_TECH_STACK_AND_CONVENTIONS.docx)
 - Tài liệu phân tích hệ thống (v1.4): [Nhom12_Analysis.doc](./docs/specs/Nhom12_Analysis.doc)
 - Mô hình Use Case: [Nhóm12_Mô_Hình_Usecase.doc](./docs/specs/Nhóm12_Mô_Hình_Usecase.doc)
@@ -11,11 +14,14 @@ Khung dự án Backend (**Spring Boot 3 + Flyway + Spring Data JPA + PostgreSQL 
 
 ```text
 nutrition-management/
+├── AGENTS.md                    # Luật sở hữu thư mục, Sprint 0 & quy chuẩn cứng cho AI Coding Agents
+├── CLAUDE.md                    # Điểm vào cho Claude Code (trỏ sang AGENTS.md & CONTRIBUTING.md)
+├── CONTRIBUTING.md              # Chiến lược chia nhánh GitHub, checklist PR & prompt mẫu cho 4 thành viên
 ├── .env.example                 # Biến môi trường mẫu (sao chép thành .env khi chạy local; KHÔNG commit .env)
-├── .gitignore                   # Bỏ qua target/, .env, data/, uploads/, ~$*
+├── .gitignore                   # Bỏ qua target/, node_modules/, dist/, .env, data/, uploads/, ~$*
 ├── .gitmessage                  # Mẫu commit chuẩn (<type>(<scope>): <mô tả>)
 ├── .github/
-│   ├── PULL_REQUEST_TEMPLATE.md # Mẫu Pull Request đối chiếu UC, màn hình UI & checklist test
+│   ├── PULL_REQUEST_TEMPLATE.md # Mẫu Pull Request đối chiếu UC, màn hình UI, BE/FE test & checklist
 │   └── workflows/backend-ci.yml # GitHub Actions tự động chạy mvn -B test khi push/PR
 ├── docker-compose.yml           # Tùy chọn chạy PostgreSQL 17 bằng Docker
 ├── scripts/
@@ -23,10 +29,11 @@ nutrition-management/
 │   └── log-commit.ps1           # Script tự động ghi lịch sử commit vào docs/progress/<Họ_Tên>.md
 ├── docs/
 │   ├── specs/                   # Các tài liệu đặc tả chính thức (Usecase, Analysis, Tech Stack, UI Spec)
-│   ├── tasks/                   # 4 file Word giao việc riêng cho từng thành viên (*_tasks.docx)
+│   ├── tasks/                   # AI_TASKS_OVERVIEW.md + 4 file Word giao việc riêng (*_tasks.docx, bản v1.1)
 │   ├── progress/                # Nhật ký tiến độ & lịch sử commit riêng từng thành viên (chống conflict)
 │   ├── diagrams/                # Toàn bộ sơ đồ Draw.io nguồn (.drawio) & ảnh xuất (.png) theo 7 nhóm
 │   └── database/                # 001_schema.sql, 002_publish_prescription.sql, 003_seed_dev.sql, 090_verify.sql
+├── frontend/                    # (Khởi tạo ở Sprint 0 bởi Đặng Trần Thiện: React + TS + Vite + Tailwind + shadcn/ui)
 └── backend/
     ├── pom.xml                  # Spring Boot 3.5.16, Java 17 (tương thích JDK 21), Flyway + PostgreSQL
     └── src/
@@ -40,9 +47,10 @@ nutrition-management/
         │   ├── auth/            # Role, UserStatus, AppUser, AppUserRepository
         │   ├── user/            # UC-USER-01 (chờ triển khai chi tiết)
         │   ├── patient/         # Patient, PatientIntake, IntakeStatus, PatientRepository
-        │   ├── intake/          # UC-PROF-04, UC-PROF-05 (chờ triển khai chi tiết)
+        │   ├── intake/          # UC-PROF-04 Tiếp nhận bệnh nhân (Hồ Đình Phước Thịnh)
+        │   ├── clinical/        # UC-PROF-05 Bệnh lý/Dị ứng & FoodSafetyReview (Phạm Đình Thịnh)
         │   ├── doctor/          # Clinician, Assignment, AssignmentStatus, AssignmentRepository
-        │   ├── communication/   # UC-APPT-01, UC-COMM-01 (chờ triển khai chi tiết)
+        │   ├── communication/   # UC-APPT-01, UC-COMM-01, Notification Outbox (Hồ Đình Phước Thịnh)
         │   ├── food/            # Food, FoodVersion, FoodGroup, FoodStatus, FoodGroupRepository
         │   ├── mealplan/        # Prescription, PrescriptionVersion, PrescriptionProcedureService
         │   ├── journal/         # UC-JOUR-01..03 (chờ triển khai chi tiết)
@@ -102,26 +110,33 @@ Mật khẩu chung cho toàn bộ tài khoản demo dev (đã băm bằng `BCryp
 | `PATIENT` | `benhnhan2@nhom12.local` | Nguyễn Thị Bình — hồ sơ tiếp nhận `SUBMITTED` chờ Trưởng khoa duyệt |
 | `PATIENT` | `benhnhan3@nhom12.local` | Trần Hoàng Cường — đang `PAUSED` hợp lệ (4 ngày) |
 
-## 4. Phân công công việc Nhóm 12
+## 4. Phân công công việc Nhóm 12 (v1.1 — Kèm React Frontend)
 
-- **24521605 – Lê Trần Quang Thắng (Nhóm trưởng):** Thiết kế hệ thống, Database PostgreSQL 17, UML, UI Spec ([Nhom12_Dac_Ta_UI_va_Luong_Man_Hinh.docx](./docs/specs/Nhom12_Dac_Ta_UI_va_Luong_Man_Hinh.docx)), khung Spring Boot Backend & review Pull Request.
-- **24521657 – Đặng Trần Thiện:** Auth, Tài khoản, Onboarding BMI, Tiếp nhận (`UC-PROF-04`), Bệnh lý/Dị ứng (`UC-PROF-05`) — xem [Đặng_Trần_Thiện_tasks.docx](./docs/tasks/Đặng_Trần_Thiện_tasks.docx).
-- **24521679 – Hồ Đình Phước Thịnh:** Phân công 30 ca (`BR-01`), Tạm dừng (`UC-PROF-03`), Lịch khám (`UC-APPT-01`), Chat & Thông báo — xem [Hồ_Đình_Phước_Thịnh_tasks.docx](./docs/tasks/Hồ_Đình_Phước_Thịnh_tasks.docx).
-- **24521702 – Phạm Đình Thịnh:** Món ăn (`UC-FOOD-01`), Thực đơn mẫu (`UC-PLAN-01`), Phiếu chỉ định (`UC-PRES-01..02`, `BR-02/08`) — xem [Phạm_Đình_Thịnh_tasks.docx](./docs/tasks/Phạm_Đình_Thịnh_tasks.docx).
-- **24521666 – Phan Viết Thiện:** Nhật ký 48h, Chỉ số sức khỏe, Cảnh báo Đỏ/Vàng (`SLA 60p/2h`), Job `BR-06/07`, 7 Báo cáo & Audit — xem [Phan_Viết_Thiện_tasks.docx](./docs/tasks/Phan_Viết_Thiện_tasks.docx).
+- **24521605 – Lê Trần Quang Thắng (Nhóm trưởng):** Thiết kế hệ thống, Database PostgreSQL 17, UML, UI Spec ([Nhom12_Dac_Ta_UI_va_Luong_Man_Hinh.docx](./docs/specs/Nhom12_Dac_Ta_UI_va_Luong_Man_Hinh.docx)), khung Spring Boot Backend, quy chuẩn AI agent & review Pull Request.
+- **24521657 – Đặng Trần Thiện (`dt-thien`):** **Sprint 0 Khung React Frontend + CI Frontend** (5 layout vai trò, `RoleGuard`, `apiClient`) + Auth/JWT (`UC-AUTH-01..04`), Onboarding BMI (`UC-PROF-01`) & Quản trị tài khoản (`UC-USER-01`, `SCR-ADM-00..01`) — xem [Đặng_Trần_Thiện_tasks.docx](./docs/tasks/Đặng_Trần_Thiện_tasks.docx).
+- **24521679 – Hồ Đình Phước Thịnh (`hdp-thinh`):** Tiếp nhận bệnh nhân (`UC-PROF-04`), Phân công 30 ca (`BR-01`), Tạm dừng (`UC-PROF-03`), Lịch khám (`UC-APPT-01`), Chat & Notification Outbox (BE + FE) — xem [Hồ_Đình_Phước_Thịnh_tasks.docx](./docs/tasks/Hồ_Đình_Phước_Thịnh_tasks.docx).
+- **24521702 – Phạm Đình Thịnh (`pd-thinh`):** Bệnh lý/Dị ứng & `FoodSafetyReview` (`UC-PROF-05`), Món ăn (`UC-FOOD-01`), Thực đơn mẫu (`UC-PLAN-01`), Phiếu chỉ định (`UC-PRES-01..02`, `BR-02/08`) (BE + FE) — xem [Phạm_Đình_Thịnh_tasks.docx](./docs/tasks/Phạm_Đình_Thịnh_tasks.docx).
+- **24521666 – Phan Viết Thiện (`pv-thien`):** Nhật ký 48h, Chỉ số sức khỏe, Cảnh báo Đỏ/Vàng (`SLA 60p/2h`), Job `BR-06/07`, 7 Báo cáo CSV & Audit (BE + FE widget/screens) — xem [Phan_Viết_Thiện_tasks.docx](./docs/tasks/Phan_Viết_Thiện_tasks.docx).
 
-## 5. Quy trình ghi nhận tiến độ & Commit History (Chống Merge Conflict)
+## 5. Bắt đầu nhanh cho Thành viên & AI Agent
 
-Xem hướng dẫn đầy đủ tại [docs/progress/README.md](./docs/progress/README.md). Tóm tắt 3 bước cho mỗi tính năng:
-1. Sau khi clone repo, bật mẫu commit chuẩn:
+Đọc đầy đủ quy trình chia nhánh và prompt mẫu cho AI tại [AGENTS.md](./AGENTS.md), [CONTRIBUTING.md](./CONTRIBUTING.md) và [docs/progress/README.md](./docs/progress/README.md). Tóm tắt hằng ngày:
+1. Thiết lập 1 lần sau khi clone repo:
    ```powershell
    git config commit.template .gitmessage
    git config core.quotepath false
    ```
-2. Sau khi `git commit` theo mẫu `<type>(<scope>): <mô tả>`, cập nhật nhật ký tiến độ riêng của bạn (**chỉ sửa file mang tên mình** trong `docs/progress/`):
+2. Tạo nhánh ngắn từ `main` theo mã của bạn (`feat/dt-thien/...`, `feat/hdp-thinh/...`, `feat/pd-thinh/...`, `feat/pv-thien/...`):
    ```powershell
-   .\scripts\log-commit.ps1 -MemberFile "Đặng_Trần_Thiện.md" -Tested "mvn test PASS; Swagger OK" -Notes "Hoàn tất endpoint ..."
-   git add docs/progress/Đặng_Trần_Thiện.md
-   git commit --amend --no-edit
+   git checkout main
+   git pull origin main
+   git checkout -b feat/hdp-thinh/intake-30slots
    ```
-3. Push lên branch `feature/...` và mở Pull Request vào `main` theo mẫu `.github/PULL_REQUEST_TEMPLATE.md` (CI `.github/workflows/backend-ci.yml` sẽ tự kiểm tra `mvn -B test`).
+3. Sau khi test PASS và `git commit`, ghi nhật ký tiến độ riêng của bạn (**chỉ sửa file mang tên mình** trong `docs/progress/`):
+   ```powershell
+   .\scripts\log-commit.ps1 -MemberFile "Hồ_Đình_Phước_Thịnh.md" -Tested "mvn test PASS" -Notes "Hoàn tất ..."
+   git add docs/progress/Hồ_Đình_Phước_Thịnh.md
+   git commit --amend --no-edit
+   git push -u origin feat/hdp-thinh/intake-30slots
+   ```
+4. Tạo Pull Request vào `main` theo mẫu [.github/PULL_REQUEST_TEMPLATE.md](./.github/PULL_REQUEST_TEMPLATE.md).
